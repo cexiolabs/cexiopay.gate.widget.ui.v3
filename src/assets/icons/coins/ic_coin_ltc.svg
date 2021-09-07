@@ -1,0 +1,15 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic_coin_ltc">
+<g id="Group 20">
+<path id="Path" d="M28 56C43.4639 56 56 43.4639 56 28C56 12.536 43.4639 0 28 0C12.536 0 0 12.536 0 28C0 43.4639 12.536 56 28 56Z" fill="#3D5C98"/>
+<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="56" height="56">
+<path id="Path_2" d="M28 56C43.4639 56 56 43.4639 56 28C56 12.536 43.4639 0 28 0C12.536 0 0 12.536 0 28C0 43.4639 12.536 56 28 56Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path id="Path 2" fill-rule="evenodd" clip-rule="evenodd" d="M0 56V0H56L0 56Z" fill="#527BCC"/>
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M54 28C54 42.3594 42.3594 54 28 54C13.6406 54 2 42.3594 2 28C2 13.6406 13.6406 2 28 2C42.3594 2 54 13.6406 54 28ZM4 28C4 41.2548 14.7452 52 28 52C41.2548 52 52 41.2548 52 28C52 14.7452 41.2548 4 28 4C14.7452 4 4 14.7452 4 28Z" fill="white"/>
+<path id="Path_3" d="M26.3735 36.4451L28.1812 29.638L32.4611 28.0744L33.5257 24.0738L33.4893 23.9747L29.2763 25.5138L32.3119 14.084H23.7033L19.7335 29L16.4191 30.2108L15.3239 34.3352L18.6358 33.1254L16.2962 41.916H39.2074L40.6761 36.4451H26.3735Z" fill="white"/>
+</g>
+</g>
+</g>
+</svg>

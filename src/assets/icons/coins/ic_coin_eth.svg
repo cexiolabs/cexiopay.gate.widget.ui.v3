@@ -1,0 +1,22 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic_coin_eth">
+<g id="Group 2">
+<g id="Group 20">
+<path id="Path" d="M28 56C43.4639 56 56 43.4639 56 28C56 12.536 43.4639 0 28 0C12.536 0 0 12.536 0 28C0 43.4639 12.536 56 28 56Z" fill="#E6E6E6"/>
+<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="56" height="56">
+<path id="Path_2" d="M28 56C43.4639 56 56 43.4639 56 28C56 12.536 43.4639 0 28 0C12.536 0 0 12.536 0 28C0 43.4639 12.536 56 28 56Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path id="Path 2" fill-rule="evenodd" clip-rule="evenodd" d="M0 56V0H56L0 56Z" fill="#F2F2F2"/>
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M54 28C54 42.3594 42.3594 54 28 54C13.6406 54 2 42.3594 2 28C2 13.6406 13.6406 2 28 2C42.3594 2 54 13.6406 54 28ZM4 28C4 41.2548 14.7452 52 28 52C41.2548 52 52 41.2548 52 28C52 14.7452 41.2548 4 28 4C14.7452 4 4 14.7452 4 28Z" fill="#CCCCCC"/>
+</g>
+</g>
+<g id="Group">
+<path id="Path_3" opacity="0.45" d="M16.5 27.91L27.8971 34.6436V9L16.5 27.91Z" fill="#010101"/>
+<path id="Path_4" opacity="0.8" d="M27.8933 9V34.6436L39.2858 27.91L27.8933 9Z" fill="#010101"/>
+<path id="Path_5" opacity="0.45" d="M16.5 30.0684L27.8971 46.1247V36.8019L16.5 30.0684Z" fill="#010101"/>
+<path id="Path_6" opacity="0.8" d="M27.8933 36.8019V46.1247L39.2949 30.0684L27.8933 36.8019Z" fill="#010101"/>
+</g>
+</g>
+</g>
+</svg>
