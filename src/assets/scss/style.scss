@@ -1,0 +1,169 @@
+$cta-color: #1BB6C1;
+$bg-color: #ffffff;
+$main-color-1: #26374C;
+$main-color-2: #667C99;
+$line-color: #E5E9ED;
+
+html {
+  font-size: 10px;
+}
+
+#widget {
+  background: rgba(38, 55, 76, 0.7);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.widget {
+  margin-top: 16.2rem;
+  width: 41.6rem;
+  height: 57.6rem;
+  background: $bg-color;
+  box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.6rem rgba(0, 0, 0, 0.04), 0 0 0.1rem rgba(0, 0, 0, 0.04);
+  border-radius: 1.6rem;
+
+  &__hero {
+    padding: 2.3rem 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__hero-menu {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+  }
+
+  &__hero-menu-logo {
+    width: 10.598rem;
+    height: 2.6rem;
+  }
+
+  &__hero-menu-cross {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+  }
+
+  &__progress {
+    width: 100%;
+    position: relative;
+    height: 0.1rem;
+    background: $line-color;
+  }
+
+  &__progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.2rem;
+    background: $cta-color;
+    width: 20%;
+    border-radius: 0 2rem 2rem 0;
+  }
+
+  &__information {
+    padding: 2.4rem 2.4rem 0 2.4rem;
+    text-align: center;
+  }
+
+  &__coin {
+    margin-top: 2.5rem;
+  }
+
+  &__box-item {
+    padding: 1.6rem 2.4rem;
+    border-top: 0.1rem solid $line-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 0.1rem solid $line-color;
+    }
+  }
+
+  &__box-item-name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box-item-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.8rem;
+  }
+
+  &__box-item-convert {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box-item-arrow {
+    margin-left: 2rem;
+    height: 1rem;
+    width: 0.7rem;
+  }
+
+  &__link-wrapper {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    color: $cta-color;
+    text-decoration: none;
+  }
+
+  &__terms {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    padding: 0 2.4rem 2.4rem 2.4rem;
+  }
+}
+
+.text--smallest {
+  font-size: 1.3rem;
+}
+
+.text--small {
+  font-size: 1.4rem;
+}
+
+.text--big {
+  font-size: 3.6rem;
+}
+
+.text--400 {
+  font-weight: 400;
+}
+
+.text--600 {
+  font-weight: 600;
+}
+
+.text--primary {
+  color: $main-color-1;
+}
+
+.text--secondary {
+  color: $main-color-2;
+}
+
+.lh--100 {
+  line-height: 100%;
+}
+
+.lh--130 {
+  line-height: 130%;
+}
+
+.spacer--8 {
+  margin-top: 0.8rem;
+}
