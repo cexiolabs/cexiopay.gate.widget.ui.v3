@@ -1,20 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import widget from "@/store/widget";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    isMenuOpen: false,
+  modules: {
+    widget,
   },
-  mutations: {
-    OPEN_MENU(state) {
-      state.isMenuOpen = true;
-    },
-    CLOSE_MENU(state) {
-      state.isMenuOpen = false;
-    },
-  },
-  actions: {},
-  modules: {},
 });
