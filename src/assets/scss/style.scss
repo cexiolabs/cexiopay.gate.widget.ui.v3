@@ -1,8 +1,8 @@
-$cta-color: #1BB6C1;
-$bg-color: #ffffff;
-$main-color-1: #26374C;
-$main-color-2: #667C99;
-$line-color: #E5E9ED;
+$cta-color: #1CB6C1;
+$bg-color: #FFFFFF;
+$main-color-1: #344563;
+$main-color-2: #758EB1;
+$line-color: #E3E7EE;
 
 html {
   font-size: 10px;
@@ -18,12 +18,9 @@ html {
 }
 
 .widget {
-  margin-top: 16.2rem;
-  width: 41.6rem;
-  height: 57.6rem;
+  width: 100%;
   background: $bg-color;
   box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.6rem rgba(0, 0, 0, 0.04), 0 0 0.1rem rgba(0, 0, 0, 0.04);
-  border-radius: 1.6rem;
 
   &__hero {
     padding: 2.3rem 2.4rem;
@@ -65,7 +62,12 @@ html {
     width: 20%;
     border-radius: 0 2rem 2rem 0;
   }
-
+  &__body {
+    height: calc(100% - 7.2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &__information {
     padding: 2.4rem 2.4rem 0 2.4rem;
     text-align: center;
@@ -118,13 +120,28 @@ html {
   &__link {
     color: $cta-color;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link-icon {
+    margin-top: 0.7rem;
+    width: 1.108rem;
+    height: 0.684rem;
   }
 
   &__terms {
     text-align: center;
-    margin-top: 5rem;
     font-size: 1.2rem;
     padding: 0 2.4rem 2.4rem 2.4rem;
+  }
+
+  @media (min-width: 1000px) {
+    margin-top: 16.2rem;
+    width: 41.6rem;
+    height: 57.6rem;
+    border-radius: 1.6rem;
   }
 }
 
