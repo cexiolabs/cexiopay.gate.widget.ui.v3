@@ -2,7 +2,7 @@
   <div class="widget__hero">
     <svg
       v-if="$store.state.widget.currentScreen !== 'c-menu'"
-      @click="$store.commit('widget/OPEN_MENU')"
+      @click="$store.commit('widget/CHANGE_SCREEN', 'c-menu')"
       class="widget__hero-menu"
       width="26"
       height="26"
