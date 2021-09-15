@@ -4,16 +4,21 @@ export default {
     widgetColorsTheme: {
       ctaColor: "#1CB6C1",
       backgroundColor: "#FFFFFF",
-      mainColor: "",
+      mainColor1: "#344563",
+      mainColor2: "#758EB1",
+      borderLineColor: "#E3E7EE",
+      errorColor: "#E65069",
     },
-    isMenuOpen: false,
+    currentScreen: "c-screen-1",
   },
   mutations: {
-    OPEN_MENU(state) {
-      state.isMenuOpen = true;
+    CHANGE_SCREEN(state, screen) {
+      state.currentScreen = screen;
     },
-    CLOSE_MENU(state) {
-      state.isMenuOpen = false;
+  },
+  getters: {
+    widgetColorsTheme(state) {
+      return state.widgetColorsTheme;
     },
   },
   actions: {},
