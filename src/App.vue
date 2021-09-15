@@ -1,6 +1,11 @@
 <template>
   <div id="widget">
-    <div class="widget">
+    <div
+      class="widget"
+      :style="{
+        background: $store.state.widget.widgetColorsTheme.backgroundColor,
+      }"
+    >
       <c-header />
       <c-progress-bar v-if="$store.state.widget.currentScreen !== 'c-menu'" />
       <c-screen1 v-if="$store.state.widget.currentScreen === 'c-screen-1'" />
