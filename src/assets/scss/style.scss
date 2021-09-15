@@ -1,8 +1,6 @@
-$cta-color: #1CB6C1;
-$bg-color: #FFFFFF;
-$main-color-1: #344563;
-$main-color-2: #758EB1;
-$line-color: #E3E7EE;
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
@@ -19,7 +17,6 @@ html {
 
 .widget {
   width: 100%;
-  background: $bg-color;
   box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.6rem rgba(0, 0, 0, 0.04), 0 0 0.1rem rgba(0, 0, 0, 0.04);
 
   &__hero {
@@ -50,7 +47,6 @@ html {
     width: 100%;
     position: relative;
     height: 0.1rem;
-    background: $line-color;
   }
 
   &__progress-bar {
@@ -58,16 +54,17 @@ html {
     top: 0;
     left: 0;
     height: 0.2rem;
-    background: $cta-color;
     width: 20%;
     border-radius: 0 2rem 2rem 0;
   }
+
   &__body {
     height: calc(100% - 7.2rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   &__information {
     padding: 2.4rem 2.4rem 0 2.4rem;
     text-align: center;
@@ -78,15 +75,35 @@ html {
   }
 
   &__box-item {
+    &:last-child {
+      .widget__box-item-decor {
+        display: block;
+      }
+    }
+
+    &-decor {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__box-item-wrapper {
     padding: 1.6rem 2.4rem;
-    border-top: 0.1rem solid $line-color;
+  }
+
+  &__box-item-decor {
+    width: 100%;
+    height: 0.1rem;
+    margin: 0;
+    border: none;
+    display: block;
+  }
+
+  &__box-item-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &:last-child {
-      border-bottom: 0.1rem solid $line-color;
-    }
   }
 
   &__box-item-name {
@@ -106,9 +123,7 @@ html {
   }
 
   &__box-item-arrow {
-    margin-left: 2rem;
-    height: 1rem;
-    width: 0.7rem;
+    margin-left: 0.8rem;
   }
 
   &__link-wrapper {
@@ -118,7 +133,6 @@ html {
   }
 
   &__link {
-    color: $cta-color;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -163,14 +177,6 @@ html {
 
 .text--600 {
   font-weight: 600;
-}
-
-.text--primary {
-  color: $main-color-1;
-}
-
-.text--secondary {
-  color: $main-color-2;
 }
 
 .lh--100 {
