@@ -21,7 +21,7 @@ jobs:
           cmd: build
       - name: Deploy to server
         uses: wangyucode/sftp-upload-action@v1.1
-        env:
+        with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USER_NAME }}
           password: ${{ secrets.USER_PASSWORD }}
