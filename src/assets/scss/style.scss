@@ -19,6 +19,10 @@ html {
   width: 100%;
   box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.6rem rgba(0, 0, 0, 0.04), 0 0 0.1rem rgba(0, 0, 0, 0.04);
 
+  &__wrapper {
+    height: 100%;
+  }
+
   &__hero {
     padding: 2.3rem 2.4rem;
     display: flex;
@@ -75,6 +79,8 @@ html {
   }
 
   &__box-item {
+    cursor: pointer;
+
     &:last-child {
       .widget__box-item-decor {
         display: block;
@@ -124,6 +130,26 @@ html {
 
   &__box-item-arrow {
     margin-left: 0.8rem;
+  }
+
+  &__more-coins {
+    margin-top: 0;
+    overflow-y: auto;
+    height: 100%;
+    margin-bottom: 4.8rem;
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0.2rem;
+      background-color: #DBE1EA;
+    }
+  }
+
+  &__menu-item {
+    text-decoration: none;
   }
 
   &__link-wrapper {
