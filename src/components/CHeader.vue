@@ -1,96 +1,56 @@
 <template>
   <div class="widget__hero">
-    <svg
-      v-if="$store.state.widget.currentScreen !== 'c-menu'"
-      @click="$store.commit('widget/CHANGE_SCREEN', 'c-menu')"
-      class="widget__hero-menu"
-      width="26"
-      height="26"
-      viewBox="0 0 26 26"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        opacity="0.1"
-        x="1"
-        y="1"
-        width="24"
-        height="24"
-        rx="4"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <line
-        x1="8.75"
-        y1="13"
-        x2="17.25"
-        y2="13"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-      <line
-        x1="8.75"
-        y1="9.5"
-        x2="17.25"
-        y2="9.5"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-      <line
-        x1="8.75"
-        y1="16.5"
-        x2="17.25"
-        y2="16.5"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-    </svg>
-
-    <svg
-      v-else
-      class="widget__hero-menu"
-      @click="$store.commit('widget/CHANGE_SCREEN', 'c-screen-1')"
-      width="26"
-      height="26"
-      viewBox="0 0 26 26"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        opacity="0.1"
-        x="1"
-        y="1"
-        width="24"
-        height="24"
-        rx="4"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <line
-        x1="8.75"
-        y1="13"
-        x2="17.25"
-        y2="13"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-      />
-      <path
-        d="M12 17L8 13.0003L12 9"
-        :stroke="widgetColorsTheme.mainColor1"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-
+    <slot>
+      <svg
+        @click="handleHeaderButtonClick"
+        class="widget__hero-menu"
+        width="26"
+        height="26"
+        viewBox="0 0 26 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          opacity="0.1"
+          x="1"
+          y="1"
+          width="24"
+          height="24"
+          rx="4"
+          :stroke="widgetColorsTheme.mainColor1"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <line
+          x1="8.75"
+          y1="13"
+          x2="17.25"
+          y2="13"
+          :stroke="widgetColorsTheme.mainColor1"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <line
+          x1="8.75"
+          y1="9.5"
+          x2="17.25"
+          y2="9.5"
+          :stroke="widgetColorsTheme.mainColor1"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <line
+          x1="8.75"
+          y1="16.5"
+          x2="17.25"
+          y2="16.5"
+          :stroke="widgetColorsTheme.mainColor1"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </slot>
     <svg
       class="widget__hero-menu-logo"
       width="106"
@@ -203,6 +163,11 @@ export default {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
     }),
+  },
+  methods: {
+    handleHeaderButtonClick() {
+      this.$emit("handleHeaderButtonClick");
+    },
   },
 };
 </script>
