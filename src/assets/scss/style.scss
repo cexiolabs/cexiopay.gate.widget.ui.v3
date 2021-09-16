@@ -55,15 +55,15 @@ html {
 
   &__progress-bar {
     position: absolute;
-    top: 0;
+    top: -0.1rem;
     left: 0;
     height: 0.2rem;
     width: 20%;
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 2rem;
   }
 
   &__body {
-    height: calc(100% - 7.2rem);
+    height: calc(100% - 7.3rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -177,11 +177,71 @@ html {
     padding: 0 2.4rem 2.4rem 2.4rem;
   }
 
+  &__email {
+    margin-top: 5.2rem;
+  }
+
+  &__email-icon {
+    margin-bottom: 2.4rem;
+    width: 11.2rem;
+    height: 11.2rem;
+  }
+
+  &__email-text {
+    margin-bottom: 2.4rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 5.6rem;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 2.1rem;
+    border: none;
+  }
+
+  &__errors {
+    text-align: left;
+    padding-left: 2.1rem;
+    font-size: 1.2rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.4rem 2.4rem 2.4rem;
+  }
+
+  &__button {
+    width: calc(100% / 2 - 1.175rem);
+    height: 5.6rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+
   @media (min-width: 1000px) {
     margin-top: 16.2rem;
     width: 41.6rem;
     height: 57.6rem;
     border-radius: 1.6rem;
+
+    &__button {
+      width: calc(100% / 2 - 1rem);
+    }
+
+    &__input {
+      padding: 0 2.4rem;
+    }
+    &__errors {
+      padding-left: 2.4rem;
+    }
   }
 }
 
@@ -191,6 +251,10 @@ html {
 
 .text--small {
   font-size: 1.4rem;
+}
+
+.text--medium {
+  font-size: 2.1rem;
 }
 
 .text--big {
