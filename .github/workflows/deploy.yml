@@ -20,7 +20,7 @@ jobs:
         with:
           cmd: build
       - name: Deploy to server
-        uses: sftp-sync-deploy@v1.1
+        uses: wangyucode/sftp-upload-action@v1.1
         env:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USER_NAME }}
