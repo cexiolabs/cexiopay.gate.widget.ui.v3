@@ -1,8 +1,8 @@
 <template>
-  <div class="widget__wrapper">
-    <c-header
-      @handleHeaderButtonClick="$store.commit('widget/CHANGE_SCREEN', 'c-menu')"
-    />
+  <c-menu v-if="$store.state.widget.isMenu === true" />
+  <c-more-coins v-else-if="$store.state.widget.isMoreCoins === true" />
+  <div v-else class="widget__wrapper">
+    <c-header @handleHeaderButtonClick="$store.commit('widget/OPEN_MENU')" />
     <c-progress-bar />
     <div class="widget__body">
       <div class="widget__content">
@@ -28,14 +28,11 @@
         </div>
         <div class="widget__box widget__coin">
           <c-coin-item
-            coin-title="Bitcoin"
-            :coin-value="0.005"
-            coin-currency-name="BTC"
-          />
-          <c-coin-item
-            coin-title="Ethereum"
-            :coin-value="0.0000232"
-            coin-currency-name="ETH"
+            v-for="coin in coins"
+            :key="coin.id"
+            :coin-title="coin.name"
+            :coin-value="coin.value"
+            :coin-currency-name="coin.currency"
           />
         </div>
         <div class="widget__link-wrapper">
@@ -43,9 +40,7 @@
             :style="{ color: widgetColorsTheme.ctaColor }"
             href="#"
             class="widget__link text--small text--600"
-            @click.prevent="
-              $store.commit('widget/CHANGE_SCREEN', 'c-more-coins')
-            "
+            @click.prevent="$store.commit('widget/OPEN_MORE_COINS')"
           >
             More coins
             <svg
@@ -94,14 +89,27 @@ import { mapGetters } from "vuex";
 import CCoinItem from "@/components/CCoinItem";
 import CHeader from "@/components/CHeader";
 import CProgressBar from "@/components/CProgressBar";
+import CMenu from "@/views/CMenu";
+import CMoreCoins from "@/views/CMoreCoins";
 
 export default {
   name: "CScreen1",
-  components: { CProgressBar, CHeader, CCoinItem },
+  components: { CMoreCoins, CMenu, CProgressBar, CHeader, CCoinItem },
   computed: {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
     }),
+  },
+  data() {
+    return {
+      coins: [
+        { id: 1, name: "Bitcoin", value: 0.003, currency: "BTC" },
+        { id: 2, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 3, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 4, name: "Ethereum", value: 0.005, currency: "ETH" },
+      ],
+      isMoreCoins: false,
+    };
   },
 };
 </script>

@@ -1,5 +1,8 @@
 <template>
-  <div class="widget__box-item widget__coin-item">
+  <div
+    @click="$store.commit('widget/CHANGE_SCREEN', 'c-screen-2')"
+    class="widget__box-item widget__coin-item"
+  >
     <hr
       :style="{ background: widgetColorsTheme.borderLineColor }"
       class="widget__box-item-decor"

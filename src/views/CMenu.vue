@@ -3,7 +3,7 @@
     <c-header>
       <template slot="default">
         <svg
-          @click="$store.commit('widget/CHANGE_SCREEN', 'c-screen-1')"
+          @click="$store.commit('widget/CLOSE_MENU')"
           class="widget__hero-menu"
           width="26"
           height="26"

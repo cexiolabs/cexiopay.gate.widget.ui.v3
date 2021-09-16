@@ -1,110 +1,55 @@
 <template>
   <div class="widget__wrapper">
     <c-header>
-      <slot name="default">
-        <template slot="default">
-          <svg
-            @click="$store.commit('widget/CHANGE_SCREEN', 'c-screen-1')"
-            class="widget__hero-menu"
-            width="26"
-            height="26"
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.1"
-              x="1"
-              y="1"
-              width="24"
-              height="24"
-              rx="4"
-              :stroke="widgetColorsTheme.mainColor1"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <line
-              x1="8.75"
-              y1="13"
-              x2="17.25"
-              y2="13"
-              :stroke="widgetColorsTheme.mainColor1"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M12 17L8 13.0003L12 9"
-              :stroke="widgetColorsTheme.mainColor1"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </template>
-      </slot>
+      <template slot="default">
+        <svg
+          @click="$store.commit('widget/CLOSE_MORE_COINS')"
+          class="widget__hero-menu"
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            opacity="0.1"
+            x="1"
+            y="1"
+            width="24"
+            height="24"
+            rx="4"
+            :stroke="widgetColorsTheme.mainColor1"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <line
+            x1="8.75"
+            y1="13"
+            x2="17.25"
+            y2="13"
+            :stroke="widgetColorsTheme.mainColor1"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M12 17L8 13.0003L12 9"
+            :stroke="widgetColorsTheme.mainColor1"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </template>
     </c-header>
     <div class="widget__body widget__more-coins-body">
       <div class="widget__box widget__coin widget__more-coins">
         <c-coin-item
-          coin-title="Bitcoin"
-          :coin-value="0.005"
-          coin-currency-name="BTC"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Bitcoin"
-          :coin-value="0.005"
-          coin-currency-name="BTC"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Bitcoin"
-          :coin-value="0.005"
-          coin-currency-name="BTC"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Bitcoin"
-          :coin-value="0.005"
-          coin-currency-name="BTC"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
-        />
-        <c-coin-item
-          coin-title="Ethereum"
-          :coin-value="0.0000232"
-          coin-currency-name="ETH"
+          v-for="coin in coins"
+          :key="coin.id"
+          :coin-title="coin.name"
+          :coin-value="coin.value"
+          :coin-currency-name="coin.currency"
         />
       </div>
       <div
@@ -142,6 +87,27 @@ export default {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
     }),
+  },
+  data() {
+    return {
+      coins: [
+        { id: 1, name: "Bitcoin", value: 0.003, currency: "BTC" },
+        { id: 2, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 3, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 4, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 5, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 6, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 7, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 8, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 9, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 10, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 11, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 12, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 13, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 14, name: "Ethereum", value: 0.005, currency: "ETH" },
+        { id: 15, name: "Ethereum", value: 0.005, currency: "ETH" },
+      ],
+    };
   },
 };
 </script>
