@@ -6,8 +6,9 @@
         background: $store.state.widget.widgetColorsTheme.backgroundColor,
       }"
     >
-      <c-header />
-      <c-progress-bar v-if="$store.state.widget.currentScreen !== 'c-menu'" />
+      <c-more-coins
+        v-if="$store.state.widget.currentScreen === 'c-more-coins'"
+      />
       <c-screen1 v-if="$store.state.widget.currentScreen === 'c-screen-1'" />
       <c-menu v-if="$store.state.widget.currentScreen === 'c-menu'" />
     </div>
@@ -18,11 +19,10 @@
 import "./assets/scss/style.scss";
 import CScreen1 from "@/views/CScreen1";
 import CMenu from "@/views/CMenu";
-import CHeader from "@/components/CHeader";
-import CProgressBar from "@/components/CProgressBar";
+import CMoreCoins from "@/views/CMoreCoins";
 
 export default {
   name: "App",
-  components: { CProgressBar, CHeader, CScreen1, CMenu },
+  components: { CMoreCoins, CScreen1, CMenu },
 };
 </script>
