@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ubuntu-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+      - name: Call yarn install
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+      - name: Call yarn build
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build
+      - name: Deploy to server
+        uses: wangyucode/sftp-upload-action@v1.1
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.USER_PASSWORD }}
+          port: ${{ secrets.PORT }}
+          localDir: 'dist'
+          remoteDir: '/home/eminzzz/projects/cex-pay-widget'
