@@ -5,7 +5,10 @@
   >
     <div
       class="widget__progress-bar"
-      :style="{ background: widgetColorsTheme.ctaColor }"
+      :style="{
+        background: widgetColorsTheme.ctaColor,
+        width: `${currentProgressValue}%`,
+      }"
     ></div>
   </div>
 </template>
@@ -19,6 +22,33 @@ export default {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
     }),
+    currentProgressValue() {
+      let screenResult = null;
+      const screens = 5;
+      switch (this.$store.state.widget.currentScreen) {
+        case "c-screen-1": {
+          screenResult = 1;
+          break;
+        }
+        case "c-screen-2": {
+          screenResult = 2;
+          break;
+        }
+        case "c-screen-3": {
+          screenResult = 3;
+          break;
+        }
+        case "c-screen-4": {
+          screenResult = 4;
+          break;
+        }
+        case "c-screen-5": {
+          screenResult = 5;
+          break;
+        }
+      }
+      return (screenResult * 100) / screens;
+    },
   },
 };
 </script>
