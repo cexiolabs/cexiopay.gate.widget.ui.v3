@@ -40,13 +40,13 @@
               />
               <path
                 d="M58.1114 90V74V58L29.667 42"
-                stroke="#1CB6C1"
+                :stroke="widgetColorsTheme.ctaColor"
                 stroke-width="4"
                 stroke-linejoin="round"
               />
               <path
                 d="M86.5559 42L58.1114 58L29.667 42"
-                stroke="#1CB6C1"
+                :stroke="widgetColorsTheme.ctaColor"
                 stroke-width="4"
                 stroke-linejoin="round"
               />
