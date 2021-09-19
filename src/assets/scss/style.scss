@@ -225,6 +225,54 @@ html {
     cursor: pointer;
   }
 
+  &__timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__timer-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.8rem;
+  }
+
+  &__qr {
+    margin: 2.4rem auto 0 auto;
+    width: 15.5rem;
+    height: 15.5rem;
+    border-radius: 0.685714rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__qr-icon {
+    width: 13.555rem;
+    height: 13.555rem;
+  }
+
+  &__copy-wrapper {
+    margin-top: 2.4rem;
+  }
+
+  &__copy {
+    text-align: left;
+    margin-bottom: 2.4rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copy-value {
+    margin-top: 0.8rem;
+    word-break: break-word;
+  }
+
+  &__copy-value-icon {
+    vertical-align: middle;
+    margin-left: 0.8rem;
+  }
 
   @media (min-width: 1000px) {
     box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.6rem rgba(0, 0, 0, 0.04), 0 0 0.1rem rgba(0, 0, 0, 0.04);
