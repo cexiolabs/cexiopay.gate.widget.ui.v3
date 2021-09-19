@@ -5,7 +5,7 @@
         <div class="widget__content">
           <div class="widget__information">
             <div
-              class="text--small text--600 lh--100"
+              class="text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
               Time left to complete payment:
