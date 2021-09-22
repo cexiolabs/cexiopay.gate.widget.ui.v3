@@ -1,0 +1,56 @@
+{
+  "menu": {
+    "about": "ruAbout",
+    "faq": "ruFAQ",
+    "terms": "ruTerms of use",
+    "privacy": "ruPrivacy policy",
+    "contact": "ruContact us"
+  },
+  "screen1": {
+    "title": "ruAmount",
+    "helper": "ruChoose crypto for payment",
+    "link": "ruMore coins",
+    "termsAndPrivacy": {
+      "sentence": "ruBy making a payment you are agreeing with",
+      "terms": "ruTerms of use",
+      "delimiter": "and",
+      "privacy": "ruPrivacy policy"
+    }
+  },
+  "screen2": {
+    "title": "ruProvide your e-mail address",
+    "helper": "ruSend status updates to e-mail",
+    "placeholder": "ruProvide your e-mail address"
+  },
+  "screen3": {
+    "title": "ruTime left to complete payment",
+    "exactly": "ruExactly",
+    "address": "ruAddress"
+  },
+  "screen4": {
+    "title": "ruPayment received. You can close the widget",
+    "helper": "ruWaiting for 5 confirmations"
+  },
+  "screen5": {
+    "title": "ruPayment successful",
+    "helper": "ruInformation has been sent to your email"
+  },
+  "footer": {
+    "orderId": "ruOrder ID",
+    "invoiceAmount": "ruInvoice amount",
+    "exchangeRate": "ruExchange rate",
+    "amountInCurrency": "ruAmount in",
+    "inputtedAmount": "ruInputted amount"
+  },
+  "amount": {
+    "title": "ruAmount"
+  },
+  "buttons": {
+    "back": "ruBack",
+    "next": "ruNext"
+  },
+  "validation": {
+    "required": "ruField is required!",
+    "email": "ruFill correct email"
+  }
+}

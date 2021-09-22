@@ -1,0 +1,56 @@
+{
+  "menu": {
+    "about": "About",
+    "faq": "FAQ",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy",
+    "contact": "Contact us"
+  },
+  "screen1": {
+    "title": "Amount",
+    "helper": "Choose crypto for payment",
+    "link": "More coins",
+    "termsAndPrivacy": {
+      "sentence": "By making a payment you are agreeing with",
+      "terms": "Terms of use",
+      "delimiter": "and",
+      "privacy": "Privacy policy"
+    }
+  },
+  "screen2": {
+    "title": "Provide your e-mail address",
+    "helper": "Send status updates to e-mail",
+    "placeholder": "Provide your e-mail address"
+  },
+  "screen3": {
+    "title": "Time left to complete payment",
+    "exactly": "Exactly",
+    "address": "Address"
+  },
+  "screen4": {
+    "title": "Payment received. You can close the widget",
+    "helper": "Waiting for 5 confirmations"
+  },
+  "screen5": {
+    "title": "Payment successful",
+    "helper": "Information has been sent to your email"
+  },
+  "amount": {
+    "title": "Amount"
+  },
+  "footer": {
+    "orderId": "Order ID",
+    "invoiceAmount": "Invoice amount",
+    "exchangeRate": "Exchange rate",
+    "amountInCurrency": "Amount in",
+    "inputtedAmount": "Inputted amount"
+  },
+  "buttons": {
+    "back": "Back",
+    "next": "Next"
+  },
+  "validation": {
+    "required": "Field is required!",
+    "email": "Fill correct email"
+  }
+}
