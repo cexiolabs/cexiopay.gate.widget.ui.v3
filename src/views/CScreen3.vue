@@ -8,7 +8,7 @@
               class="text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Time left to complete payment:
+              {{ $t("screen3.title") }}:
             </div>
             <div class="widget__timer spacer--8">
               <svg
@@ -1552,7 +1552,7 @@
                   class="widget__copy-title lh--130 text--small text--400"
                   :style="{ color: widgetColorsTheme.mainColor1 }"
                 >
-                  Exactly
+                  {{ $t("screen3.exactly") }}
                 </div>
                 <div
                   class="widget__copy-value lh--130 text--small text--600"
@@ -1589,7 +1589,7 @@
                   class="widget__copy-title lh--130 text--small text--400"
                   :style="{ color: widgetColorsTheme.mainColor1 }"
                 >
-                  Address
+                  {{ $t("screen3.address") }}
                 </div>
                 <div
                   class="widget__copy-value lh--130 text--small text--600"
@@ -1626,10 +1626,10 @@
         </div>
         <div class="widget__buttons">
           <c-button type="secondary" @handleButtonClick="backScreen"
-            >Back
+            >{{ $t("buttons.back") }}
           </c-button>
           <c-button type="primary" @handleButtonClick="nextScreen"
-            >Next
+            >{{ $t("buttons.next") }}
           </c-button>
         </div>
       </div>
@@ -1643,7 +1643,7 @@ import CButton from "@/components/CButton";
 import MainLayout from "@/layouts/main-layout";
 
 export default {
-  name: "CScreen1",
+  name: "CScreen3",
   components: { MainLayout, CButton },
   computed: {
     ...mapGetters({
@@ -1660,5 +1660,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss"></style>

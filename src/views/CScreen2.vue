@@ -8,7 +8,7 @@
               class="text--small text--600 lh--100"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Provide your e-mail address
+              {{ $t("screen2.title") }}
             </div>
             <div class="widget__email">
               <svg
@@ -46,7 +46,7 @@
                 class="widget__email-text text--medium lh--130 text--600"
                 :style="{ color: widgetColorsTheme.mainColor1 }"
               >
-                Send status updates to e-mail
+                {{ $t("screen2.helper") }}
               </div>
               <input
                 v-model="email"
@@ -59,7 +59,7 @@
                   color: widgetColorsTheme.mainColor1,
                 }"
                 @keypress.enter="nextScreen"
-                placeholder="Provide your e-mail address"
+                :placeholder="$t('screen2.placeholder')"
               />
               <div
                 class="widget__errors lh--130 text--400"
@@ -78,10 +78,10 @@
         </div>
         <div class="widget__buttons">
           <c-button type="secondary" @handleButtonClick="backScreen"
-            >Back
+            >{{ $t("buttons.back") }}
           </c-button>
           <c-button type="primary" @handleButtonClick="nextScreen"
-            >Next
+            >{{ $t("buttons.next") }}
           </c-button>
         </div>
       </div>
@@ -95,7 +95,7 @@ import CButton from "@/components/CButton";
 import MainLayout from "@/layouts/main-layout";
 
 export default {
-  name: "CScreen1",
+  name: "CScreen2",
   components: { MainLayout, CButton },
   data() {
     return {
@@ -123,12 +123,12 @@ export default {
       this.errors = [];
 
       if (!email) {
-        this.errors.push("Field is required!");
+        this.errors.push(this.$t("validation.required"));
         return false;
       }
 
       if (!validationResult) {
-        this.errors.push("Fill correct email");
+        this.errors.push(this.$t("validation.email"));
         return false;
       }
     },
@@ -153,5 +153,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss"></style>

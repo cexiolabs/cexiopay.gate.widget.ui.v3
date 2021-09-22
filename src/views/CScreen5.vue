@@ -8,13 +8,13 @@
               class="text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Payment successful
+              {{ $t("screen5.title") }}
             </div>
             <div
               class="text--small text--600 lh--130 spacer--8"
               :style="{ color: widgetColorsTheme.mainColor2 }"
             >
-              Information has been sent to your email
+              {{ $t("screen5.helper") }}
             </div>
             <svg
               class="widget__confirmation-icon"
@@ -38,99 +38,10 @@
                 stroke-linejoin="round"
               />
             </svg>
-
-            <div class="widget__amount">
-              <span
-                class="text--small text--600 lh--130"
-                :style="{ color: widgetColorsTheme.mainColor1 }"
-                >Amount:</span
-              >
-              <div
-                class="widget__amount-value lh--130 text--600"
-                :style="{ color: widgetColorsTheme.mainColor1 }"
-              >
-                0.04629523 ETH
-              </div>
-              <span
-                class="text--small text--600 lh--130"
-                :style="{ color: widgetColorsTheme.mainColor1 }"
-                >20 USD</span
-              >
-            </div>
+            <c-amount />
           </div>
         </div>
-        <div class="widget__footer">
-          <div class="widget__footer-item">
-            <div
-              class="widget__footer-item-title lh--130 text--400 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              Order ID
-            </div>
-            <div
-              class="widget__footer-item-value lh--130 text--600 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              967013fc-0611-4547-a880-ac0ea
-            </div>
-          </div>
-          <div class="widget__footer-item">
-            <div
-              class="widget__footer-item-title lh--130 text--400 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              Invoice amount
-            </div>
-            <div
-              class="widget__footer-item-value lh--130 text--600 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              20 USD
-            </div>
-          </div>
-          <div class="widget__footer-item">
-            <div
-              class="widget__footer-item-title lh--130 text--400 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              Exchange rate
-            </div>
-            <div
-              class="widget__footer-item-value lh--130 text--600 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              432.01 USD
-            </div>
-          </div>
-          <div class="widget__footer-item">
-            <div
-              class="widget__footer-item-title lh--130 text--400 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              Amount in ETH
-            </div>
-            <div
-              class="widget__footer-item-value lh--130 text--600 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              0.04629523
-            </div>
-          </div>
-          <div class="widget__footer-item">
-            <div
-              class="widget__footer-item-title lh--130 text--400 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              Inputted amount
-            </div>
-            <div
-              class="widget__footer-item-value lh--130 text--600 text--small"
-              :style="{ color: widgetColorsTheme.mainColor1 }"
-            >
-              0.04629523
-            </div>
-          </div>
-        </div>
+        <c-footer />
       </div>
     </template>
   </main-layout>
@@ -139,17 +50,16 @@
 <script>
 import { mapGetters } from "vuex";
 import MainLayout from "@/layouts/main-layout";
+import CFooter from "@/components/CFooter";
+import CAmount from "@/components/CAmount";
 
 export default {
-  name: "CScreen1",
-  components: { MainLayout },
+  name: "CScreen5",
+  components: { CAmount, CFooter, MainLayout },
   computed: {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
     }),
   },
-  methods: {},
 };
 </script>
-
-<style lang="scss"></style>

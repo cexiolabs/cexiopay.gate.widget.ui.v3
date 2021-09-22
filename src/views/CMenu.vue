@@ -86,7 +86,7 @@
               class="widget__box-item-title text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              About
+              {{ $t("menu.about") }}
             </div>
           </div>
           <svg
@@ -148,7 +148,7 @@
               class="widget__box-item-title text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              FAQ
+              {{ $t("menu.faq") }}
             </div>
           </div>
           <svg
@@ -198,7 +198,7 @@
               class="widget__box-item-title text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Terms of use
+              {{ $t("menu.terms") }}
             </div>
           </div>
           <svg
@@ -248,7 +248,7 @@
               class="widget__box-item-title text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Privacy policy
+              {{ $t("menu.privacy") }}
             </div>
           </div>
           <svg
@@ -301,7 +301,7 @@
               class="widget__box-item-title text--small text--600 lh--130"
               :style="{ color: widgetColorsTheme.mainColor1 }"
             >
-              Contact us
+              {{ $t("menu.contact") }}
             </div>
           </div>
           <svg
@@ -343,5 +343,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

@@ -52,25 +52,7 @@
           :coin-currency-name="coin.currency"
         />
       </div>
-      <div
-        :style="{ color: widgetColorsTheme.mainColor2 }"
-        class="widget__terms text--400 lh--130"
-      >
-        By making a payment you are agreeing with <br />
-        <a
-          :style="{ color: widgetColorsTheme.mainColor1 }"
-          class="widget__terms-link text--600"
-          href="#"
-          >Terms of use</a
-        >
-        and
-        <a
-          :style="{ color: widgetColorsTheme.mainColor1 }"
-          class="widget__terms-link text--600"
-          href="#"
-          >Privacy policy</a
-        >
-      </div>
+      <c-rules />
     </div>
   </div>
 </template>
@@ -79,10 +61,11 @@
 import CCoinItem from "@/components/CCoinItem";
 import { mapGetters } from "vuex";
 import CHeader from "@/components/CHeader";
+import CRules from "@/components/CRules";
 
 export default {
   name: "CMoreCoins",
-  components: { CHeader, CCoinItem },
+  components: { CRules, CHeader, CCoinItem },
   computed: {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
@@ -111,5 +94,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

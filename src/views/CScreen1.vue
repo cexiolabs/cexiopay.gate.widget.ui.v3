@@ -11,7 +11,7 @@
             class="text--small text--600 lh--100"
             :style="{ color: widgetColorsTheme.mainColor1 }"
           >
-            Amount:
+            {{ $t("screen1.title") }}:
           </div>
           <div
             class="text--big text--600 lh--100 spacer--8"
@@ -23,7 +23,7 @@
             class="text--smallest text--600 lh--100 spacer--8"
             :style="{ color: widgetColorsTheme.mainColor2 }"
           >
-            Choose crypto for payment:
+            {{ $t("screen1.helper") }}:
           </div>
         </div>
         <div class="widget__box widget__coin">
@@ -42,7 +42,7 @@
             class="widget__link text--small text--600"
             @click.prevent="$store.commit('widget/OPEN_MORE_COINS')"
           >
-            More coins
+            {{ $t("screen1.link") }}
             <svg
               class="widget__link-icon"
               width="1.2rem"
@@ -61,25 +61,7 @@
           </a>
         </div>
       </div>
-      <div
-        :style="{ color: widgetColorsTheme.mainColor2 }"
-        class="widget__terms text--400 lh--130"
-      >
-        By making a payment you are agreeing with <br />
-        <a
-          :style="{ color: widgetColorsTheme.mainColor1 }"
-          class="widget__terms-link text--600"
-          href="#"
-          >Terms of use</a
-        >
-        and
-        <a
-          :style="{ color: widgetColorsTheme.mainColor1 }"
-          class="widget__terms-link text--600"
-          href="#"
-          >Privacy policy</a
-        >
-      </div>
+      <c-rules />
     </div>
   </div>
 </template>
@@ -91,10 +73,11 @@ import CHeader from "@/components/CHeader";
 import CProgressBar from "@/components/CProgressBar";
 import CMenu from "@/views/CMenu";
 import CMoreCoins from "@/views/CMoreCoins";
+import CRules from "@/components/CRules";
 
 export default {
   name: "CScreen1",
-  components: { CMoreCoins, CMenu, CProgressBar, CHeader, CCoinItem },
+  components: { CRules, CMoreCoins, CMenu, CProgressBar, CHeader, CCoinItem },
   computed: {
     ...mapGetters({
       widgetColorsTheme: "widget/widgetColorsTheme",
@@ -113,5 +96,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>
