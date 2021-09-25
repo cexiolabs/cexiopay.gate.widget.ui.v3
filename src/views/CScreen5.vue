@@ -25,14 +25,17 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                class="widget__confirmation-icon-round"
                 opacity="0.1"
                 d="M113.993 52.8236V58.0312C113.979 82.8302 97.6548 104.666 73.8735 111.698C50.0922 118.729 24.5186 109.281 11.0211 88.4768C-2.47649 67.6728 -0.682672 40.4688 15.4298 21.6172C31.5422 2.7657 58.135 -3.2426 80.7871 6.85059"
                 :stroke="widgetColorsTheme.mainColor1"
                 stroke-width="4"
               />
               <path
+                class="widget__confirmation-icon-arrow"
                 d="M114 12.6345L57.7143 68.9202L41 52.206"
                 :stroke="widgetColorsTheme.ctaColor"
+                style="stroke-dasharray: 48rem, 48rem; stroke-dashoffset: 96rem"
                 stroke-width="4"
                 stroke-linecap="round"
                 stroke-linejoin="round"

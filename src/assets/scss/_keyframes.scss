@@ -1,0 +1,26 @@
+@keyframes checkmark {
+  from {
+    stroke-dashoffset: 48rem;
+  }
+  to {
+    stroke-dashoffset: 96rem;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(-1);
+  }
+  60% {
+    transform: scaleX(1);
+  }
+}
