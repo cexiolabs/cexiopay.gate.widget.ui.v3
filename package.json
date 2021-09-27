@@ -1,5 +1,5 @@
 {
-  "name": "cex-pay-widget",
+  "name": "cexpay.widget.ui.v3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@cexiolabs/cexpay.gate.widget.client-mock": "^0.0.10",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",

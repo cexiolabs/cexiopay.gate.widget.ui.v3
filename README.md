@@ -1,4 +1,4 @@
-# cex-pay-widget
+# CEX Pay's Widget UI
 
 ## Project setup
 ```
